@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- <body onload="alert('hello world');"> Just commented this to -->
+    <!-- the above is inline javascript -->
+
+    <!-- So, for example, in the body, I'm going to add an attribute called onload. And what this means is that when the body of our web site gets loaded up, then whatever Javascript we place inside these two quotation marks will get carried out. -->
+
+    <!-- Now there's a bit of a problem here because you can see that the Javascript that gets created inline in our HTML has to be included inside some quotation marks. But in our alert we also want to have the string “Hello”, which is also enclosed by quotation marks.
     
+    So you can see how this is confusing, because to the browser it might think that this is a string, and this is a string, and you can see it in fact is highlighting it exactly that way, because the green parts are the things that it thinks is a string and the orange part it's interpreting as code.
+    
+    So, in these situations, when we've got a quotation mark inside another set of quotation marks, what we have to do is we have to downgrade our quotation marks to a single quote.
+    
+    So instead of having double quotes we change it to a single quote and now it knows what we're talking about.
+
+    javascript -- alert('hello world');
+     -->
+    <h1>Hello</h1>
+    <script>
+        // alert("hello world");
+        // This is Internal JS
+    </script>
+
+    <script src="index.js" charset="utf-8"></script>
+    <!-- This is external js -->
+
+    <!-- External css is placed right at the top in the head under the title and the external js placed ate the bottom of the body just before we close the body tag, as we want the styles to load up quicker and the js to execute later on after all the elements have been created. -->
+
 </body>
+
 </html>
