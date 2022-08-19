@@ -77,3 +77,26 @@ document.querySelector("li a").style.color="red";// this will change the color o
 document.querySelector("li").style.color="red";//this will change the bullet point to red as the list item and the anchor tag are seperate objectss
 
 */
+
+/*
+144. Manipulating and Changing Styles of HTML Elements with Javascript
+
+fontSize to 10rem. And you can find all of those names inside the DOM style object documentation and you'll see all of these properties and what they look like when you're trying to change it using Javascript instead of CSS.
+
+As a rule of thumb, in most cases the CSS properties are exactly the same, other than the fact that there are no dashes and every word after the first one will have its first letter capitalized.
+
+eg.) font-size-->css, fontSize --> in Javascript
+
+The other thing to notice is that the values that you're going to set it to have to be represented as strings. Whereas in CSS we simply just specified the value as is, for example padding 7 percent, if we're trying to do this with Javascript , then we actually have to specify everything as a string, even if it's a number, like line height or padding. Kuch bhie value ho css ki woh hamey string deni hai
+
+document.querySelector("h1").style.color="red";//h1 is the tagName
+
+document.querySelector("h1").style.fontSize="10rem"//h1 is the tagName
+
+document.querySelector("h1").style.padding="30%"//h1 is the tagName
+
+document.querySelector("button").style.backgroundColor="yellow"//button is the tagName 
+
+every property is camelCased and property values are written in strings
+
+*/
