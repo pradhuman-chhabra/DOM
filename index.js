@@ -14,6 +14,11 @@ heading.style.color="red"
 
 document.querySelector("input").click()
 
+document.querySelector("button").classList.add("invisible")//this will add the class button to the button
+
+document.querySelector("h1").classList.add("huge")//this will add the class huge to the h1
+
+
 // So you can see that our objects inside the DOM can have properties and methods. Now properties describe something about the object and the methods are the things that the object can do. So, for example, let's say that our object isn't an HTML button, but instead it's a car object. Well, the car object also has properties and methods. The car object might have properties such as the color of the car, the number of seats, the number of doors. So these are things that describe something about the object. But it also might have methods, so the things that it can do, namely brake, drive, park. So we can use Javascript to manipulate our objects, and it's all done using the dot notation. So if our object was called car, then we can say car.color to get the value of the property.
 
 /*So if our object was called car, then we can say car.color to get the value of the property. So this is called a getter. 
@@ -98,5 +103,56 @@ document.querySelector("h1").style.padding="30%"//h1 is the tagName
 document.querySelector("button").style.backgroundColor="yellow"//button is the tagName 
 
 every property is camelCased and property values are written in strings
+
+*/
+
+
+/*
+
+145. The Separation of Concerns: Structure vs Style vs Behaviour
+
+So we've been trying to change the style of each element using Javascript.We've been writing things like 
+
+document.querySelector.style.color = “red”
+
+and this is not good practice because we're changing the style of each element using Javascript, whereas ideally all of our styles should actually be inside our CSS.
+
+But the problem is that if we wanted our style to change on the fly, say if a user clicks on a button then the color of the background changes, then we kind of need to change that using Javascript and the style property, right?
+
+Now one of the things that we can tap into is something called a (---class list---) and it's a property of every DOM object.
+
+So, for example, if we query for our button and we tap into its classList property, then you can see that
+
+it gives us a list of the classes that are attached to this element that we found. 
+
+document.querySelector("button").classList
+
+So the element in this case is our button, and you can see that inside the class attribute we've only got a single class, which is btn.
+
+Now once we have the list of classes, then we can use methods, for example .add, 
+
+document.querySelector("button").classList.add("invisible")// this will add class invisible to the element button
+
+and we can add classes to the class list. So, for example, if I wanted to add a class, for example invisible, then I can add this new class to the list of classes on our button element in our document. And now, if I hit enter and we check out our button, you can see that it's got the class btn, but it's also got the class invisible.
+
+Now what this allows us to do is we can tap into the stylesheet and we can create a separate style for, say, the invisible class, and we can say, maybe, visibility is hidden. So now, if I do the same thing where I add that invisible class to the class list of button, then you can see that as soon as that class is added to our button, the CSS style for invisible gets applied and our button disappears.
+
+document.querySelector("button").classList.remove("invisible")//this will remove the class invisible
+
+So this way we can keep all of our styles still inside our style sheet but we can turn it on and off using Javascript. Now, in addition to add, we can also remove. So now, at a different stage, I want my button to reappear. Then I can simply remove that invisible class and all of the styles that are associated with that class gets taken off that button. 
+
+document.querySelector("button").classList.toggle("invisible")//if invisible class is added then remove it and if the class is added then remove it
+
+And the last method that's quite useful is toggle. And toggle simply means that, if the class invisible is already applied then remove it, and if it's not applied then apply it. So now if I just keep using toggle you can see our button comes on and off and on and off.
+
+-----------------------------------------------------------
+
+document.querySelector("button").classList.add("invisible")
+
+this will add the class invisible using js and we can have .invisible class in our css at the time of the creation of the website and add style to it and when  the class gets added then HTML will be able to read the css and apply the styles , so we used our js to add style not directy but added a class which made the css make sense
+
+Challenge--
+
+document.querySelector("h1").classList.add("huge")//this will add the class huge to the h1
 
 */
